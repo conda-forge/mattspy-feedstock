@@ -1,5 +1,5 @@
 {% set name = "mattspy" %}
-{% set version = "0.2.0" %}
+{% set version = "0.3.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,14 +7,14 @@ package:
 
 source:
   url: https://github.com/beckermr/mattspy/archive/refs/tags/{{ version }}.tar.gz
-  sha256: 13c22f9fb6ccd2552ebd0671a32b12e3708d670d5e3e75238f74cc5d66bb2640
+  sha256: c5634c39f4744433fefe5c5a22feb1a568e83792d006a533745209256fc1c38f
 
 build:
   noarch: python
   number: 0
   script: "{{ PYTHON }} -m pip install . -vv"
   entry_points:
-    - condor-exec-run-pickled-task = mattspy.condor_exec_run:run_pickled_task
+    - mattspy-exec-run-pickled-task = mattspy.mattspy_exec_run:run_pickled_task
 
 requirements:
   host:
@@ -33,7 +33,7 @@ test:
   imports:
     - mattspy
   commands:
-    - command -v condor-exec-run-pickled-task
+    - command -v mattspy-exec-run-pickled-task
 
 about:
   home: https://github.com/beckermr/mattspy
