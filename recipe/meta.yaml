@@ -33,7 +33,7 @@ test:
   imports:
     - mattspy
   commands:
-    - command -v condor-exec-run-pickled-task
+    - command -v mattspy-exec-run-pickled-task
 
 about:
   home: https://github.com/beckermr/mattspy
