@@ -1,5 +1,5 @@
 {% set name = "mattspy" %}
-{% set version = "0.3.0" %}
+{% set version = "0.4.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://github.com/beckermr/mattspy/archive/refs/tags/{{ version }}.tar.gz
-  sha256: c5634c39f4744433fefe5c5a22feb1a568e83792d006a533745209256fc1c38f
+  sha256: f1e4e065a82b63a6f1573e59d943f68306a5aefd7225566d8a27768942be85ed
 
 build:
   noarch: python
   number: 0
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
   entry_points:
     - mattspy-exec-run-pickled-task = mattspy.mattspy_exec_run:run_pickled_task
 
@@ -40,7 +40,7 @@ about:
   license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE
-  summary: 'my personal python utils'
+  summary: my personal python utils
 
 extra:
   recipe-maintainers:
