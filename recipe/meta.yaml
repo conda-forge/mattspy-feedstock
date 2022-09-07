@@ -1,5 +1,5 @@
 {% set name = "mattspy" %}
-{% set version = "0.6.2" %}
+{% set version = "0.6.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/beckermr/mattspy/archive/refs/tags/{{ version }}.tar.gz
-  sha256: ebbed013e2c3a6b75ca9d0b0b5804c4397e75c86ae854e377cf030b9577b4f46
+  sha256: b3627d71b462f81ce8a41d4535d0a397d47f0452bae718dbe8abda510c7be593
 
 build:
   noarch: python
@@ -30,6 +30,7 @@ requirements:
     - importlib_metadata
     - loky
     - scipy
+    - esutil
 
 test:
   imports:
