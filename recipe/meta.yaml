@@ -30,6 +30,7 @@ requirements:
     - importlib_metadata
     - loky
     - scipy
+    - esutil
 
 test:
   imports:
