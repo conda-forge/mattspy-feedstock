@@ -1,5 +1,5 @@
 {% set name = "mattspy" %}
-{% set version = "0.7.0" %}
+{% set version = "0.7.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/beckermr/mattspy/archive/refs/tags/{{ version }}.tar.gz
-  sha256: d21e4878179a1ce6a31de3a42f1a795abc30a5b498406506f29b191ee79c4246
+  sha256: fcb5f41c6922e2c50b0e90cee460dd0382c0015e331ebdf76057b9477480e46f
 
 build:
   noarch: python
