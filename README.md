@@ -1,11 +1,11 @@
-About mattspy
-=============
+About mattspy-feedstock
+=======================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/mattspy-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/beckermr/mattspy
 
 Package license: BSD-3-Clause
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/mattspy-feedstock/blob/main/LICENSE.txt)
 
 Summary: my personal python utils
 
@@ -144,7 +144,4 @@ Feedstock Maintainers
 =====================
 
 * [@beckermr](https://github.com/beckermr/)
-
-
-<!-- dummy commit to enable rerendering -->
 
