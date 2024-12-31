@@ -28,7 +28,7 @@ requirements:
     - cloudpickle
     - numpy
     - joblib
-    - importlib_metadata
+    - importlib-metadata
     - loky
     - scipy
     - esutil
