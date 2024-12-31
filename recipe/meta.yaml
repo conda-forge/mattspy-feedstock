@@ -11,28 +11,31 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
   entry_points:
     - mattspy-exec-run-pickled-task = mattspy.mattspy_exec_run:run_pickled_task
 
 requirements:
   host:
-    - python >=3.7
+    - python {{ python_min }}
+    - setuptools
     - pip
     - setuptools_scm
     - setuptools_scm_git_archive
   run:
-    - python >=3.7
+    - python >={{ python_min }}
     - cloudpickle
     - numpy
     - joblib
-    - importlib_metadata
+    - importlib-metadata
     - loky
     - scipy
     - esutil
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - mattspy
   commands:
