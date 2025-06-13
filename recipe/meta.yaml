@@ -38,6 +38,7 @@ test:
     - mattspy
   commands:
     - command -v mattspy-exec-run-pickled-task
+    - python -c "import mattspy; assert mattspy.__version__ == '${{ version }}'"
 
 about:
   home: https://github.com/beckermr/mattspy
