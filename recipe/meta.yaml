@@ -1,5 +1,5 @@
 {% set name = "mattspy" %}
-{% set version = "0.7.3" %}
+{% set version = "0.76" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/beckermr/mattspy/archive/refs/tags/{{ version }}.tar.gz
-  sha256: b2bf23eb5e21e79303f3f58f0269fb0e267572fc11a3e80cb84bd5dced1af2a2
+  sha256: d3aaf258b23648f923beb12511c31223b2925aaeb6f7bf1340d8350c5729b69d
 
 build:
   noarch: python
@@ -19,16 +19,14 @@ build:
 requirements:
   host:
     - python {{ python_min }}
-    - setuptools
+    - setuptools >=45
     - pip
-    - setuptools_scm
-    - setuptools_scm_git_archive
+    - setuptools_scm >=7
   run:
     - python >={{ python_min }}
     - cloudpickle
     - numpy
     - joblib
-    - importlib-metadata
     - loky
     - scipy
     - esutil
@@ -40,6 +38,7 @@ test:
     - mattspy
   commands:
     - command -v mattspy-exec-run-pickled-task
+    - python -c "import mattspy; assert mattspy.__version__ == '{{ version }}'"
 
 about:
   home: https://github.com/beckermr/mattspy
