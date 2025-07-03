@@ -1,5 +1,5 @@
 {% set name = "mattspy" %}
-{% set version = "0.76" %}
+{% set version = "0.77" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://github.com/beckermr/mattspy/archive/refs/tags/{{ version }}.tar.gz
-  sha256: d3aaf258b23648f923beb12511c31223b2925aaeb6f7bf1340d8350c5729b69d
+  sha256: 4b62a8800c5f49473f46b59743333ff4347590f8f720ed849e839e8fa110f1bc
 
 build:
   noarch: python
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
   entry_points:
     - mattspy-exec-run-pickled-task = mattspy.mattspy_exec_run:run_pickled_task
