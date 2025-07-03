@@ -25,9 +25,11 @@ requirements:
   run:
     - python >={{ python_min }}
     - cloudpickle
-    - numpy
+    - fitsio
+    - frozendict
     - joblib
     - loky
+    - numpy
     - scipy
     - esutil
 
