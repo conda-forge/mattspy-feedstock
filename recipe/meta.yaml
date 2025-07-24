@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/beckermr/mattspy/archive/refs/tags/{{ version }}.tar.gz
-  sha256: f8670395d8b9c0ed02f3feeed839b1328185fd6f22a07e09349e7cecb50ac421
+  sha256: 951cf0babc2ac800372f21d98d563b060f84209206db5810c2f1c4e6b418c7a7
 
 build:
   noarch: python
