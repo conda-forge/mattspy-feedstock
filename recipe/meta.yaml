@@ -1,5 +1,5 @@
 {% set name = "mattspy" %}
-{% set version = "0.80" %}
+{% set version = "0.81" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/beckermr/mattspy/archive/refs/tags/{{ version }}.tar.gz
-  sha256: f8670395d8b9c0ed02f3feeed839b1328185fd6f22a07e09349e7cecb50ac421
+  sha256: 303e87d5d09255a3ae868bcf8950f8754c29f7aab3202ecbdef5f9dcde078c31
 
 build:
   noarch: python
@@ -23,6 +23,10 @@ requirements:
     - pip
     - setuptools_scm >=7
   run:
+    - jax
+    - optax
+    - pandas
+    - scikit-learn
     - python >={{ python_min }}
     - cloudpickle
     - fitsio
